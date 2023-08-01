@@ -11,7 +11,7 @@ const movies = [
     { title:"Tron El Legado ", imagenURL:'/cienciaf/9e9a7d14bc8afb71fe083a008c717928.jpg'},
     { title:"Life ", imagenURL:'/cienciaf/9026324f734f748c0205ea95ff2308f6.jpg'},
     { title:"INCEPTION", imagenURL:'cienciaf/f895e61ec92a95198c11ecfb7701b6bc.jpg'},
-    { title:"Yo despues de ti  ", imagenURL:'romance/9d11ab85db6f4111be05b0e14bf32465.jpg'},
+    { title:"Yo antes de ti  ", imagenURL:'romance/9d11ab85db6f4111be05b0e14bf32465.jpg'},
     { title:"El Diario de Noha  ", imagenURL:'/romance/70bf85721872c3c3d6edb9334398fbee.jpg'},
     { title:"Lalaland ", imagenURL:'/romance/493e2c1109f2e72f745eb7880d75e7fe.jpg'},
     { title:"Orgullo y Prejuicio  ", imagenURL:'/romance/44b048e190695dc53e87dcce109862d1.jpg'},
@@ -30,7 +30,7 @@ function displayMovies(filter = '') {
     movieElement.className = 'movie';
     movieElement.innerHTML = `
         <h2>${movie.title}</h2>
-        <img id="miImagen" src="${movie.imagenURL}" alt="Mi imagen">
+        <img id="miImagen" src="${movie.imagenURL}" alt="imagen" onclick="reproducirPelicula('ruta_a_la_pelicula_1.mp4')" >
     `;
     movieListElement.appendChild(movieElement);
     });
@@ -44,4 +44,3 @@ document.addEventListener('DOMContentLoaded', () => {
     displayMovies(searchTerm);
     });
 });
-
